@@ -21,6 +21,9 @@ export async function POST() {
 
   const config: any = {
     ClientRequestToken: uuidv4(),
+    Settings: {
+      AuditImagesLimit: 4, // Capture 4 audit images for better analysis
+    },
   };
   try {
     const command = new CreateFaceLivenessSessionCommand(config);
